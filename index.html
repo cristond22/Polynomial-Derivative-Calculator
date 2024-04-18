@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polynomial Derivative Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="calculator-widget">
+        <div class="calculator">
+            <div class="front">
+                <!-- Your existing content for the front side of the flashcard -->
+                <h2 class="heading"> <span class="gradient-text">Polynomial</span> <span class="gradient-text">Derivative Calculator</span></h2>
+
+                <div id="terms">
+                    <!-- Initial term input -->
+                    <div class="input-container">
+                        <button class="toggle-sign"onclick="toggleSign()">+</button>
+                        <div class="input-field-container">
+                        <input type="text" id="coeffInput" placeholder="Coefficient" class="input-field">
+                        <span class="input-separator">X^</span>
+                        <input type="text" id="powerInput" placeholder="Power" class="input-field">
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <button onclick="addTermController.addTerm()">Add Term</button>
+                        <button onclick="addTermController.clearPolynomial()">Clear Polynomial</button>
+                    </div>
+                </div>
+                <div id="polynomial"></div>
+                <button onclick="calculateDerivative.calculateDerivative()">Calculate Derivative</button>
+                
+            </div>
+        </div>
+        <div class="calculator result-card" id="resultCard" style="display: none;">
+            <div class="back">
+                <!-- Your existing content for the back side of the flashcard -->
+                <div id="steps" style="display: none;">
+                    <h3>Steps to calculate the derivative:</h3>
+                    <p class="modern-statement">We can take the derivative of each individual term independently using the Sum/Difference rules and then add all derivatives to find the derivative of the whole polynomial.</p>
+                    <div>The derivative of <span class="green">a</span>x<sup class="red">n</sup> is <span class="red">n</span> × <span class="green">a</span> × x<sup>(<span class="red">n</span>−1)</sup>. where <span class="green">a=coefficient</span>, <span class="red">n=power</span></div>
+                    <div id="stepsContent"></div>
+                    <p>Derivative of <span id="result"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Your existing scripts -->
+    <script src="addTermController.js"></script>
+    <script src="calculateDerivative.js"></script>
+    <script src="derivativeVal.js"></script>
+    <script src="derivativeStep.js"></script>
+    <script src="derivativeTerm.js"></script>
+
+    <script>
+        // Create instances of controllers and handle events as needed
+        const addTermController = new AddTermController();
+        const calculateDerivative = new CalculateDerivative();
+
+        function toggleSign() {
+            let signButton = document.querySelector("#terms button");
+            if (signButton.textContent === "+") {
+                signButton.textContent = "-";
+            } else {
+                signButton.textContent = "+";
+            }
+        }
+    </script>
+</body>
+</html>

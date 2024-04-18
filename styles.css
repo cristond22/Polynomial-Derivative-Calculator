@@ -1,0 +1,142 @@
+/* Your existing CSS styles */
+
+/* New CSS for flashcard styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.calculator-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calculator {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #ccc;
+}
+
+.result-container {
+    display: flex;
+    /* Add other flex properties as needed */
+}
+.superscript {
+    font-size: 1.2em; /* Adjust the size as needed */
+}
+.heading {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Adjust as needed */
+    gap: 10px; /* Adjust the spacing between buttons */
+}
+.gradient-text {
+    background-image: linear-gradient(to right, #ff6b6b, #556270);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.modern-statement {
+    background-color: #91e98e;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+.front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.question {
+    margin-top: 20px;
+}
+.green {
+    color: rgb(8, 8, 250);
+}
+
+.red {
+    color: red;
+}
+.toggle-sign {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+  
+  .item {
+    position: absolute;
+    left: 540px;
+  }
+  .input-container {
+    display: flex;
+justify-content: center; /* Adjust as needed */
+gap: 10px; /* Adjust the spacing between buttons */
+
+}
+.input-field-container {
+
+border: 1px solid #ccc;
+border-radius: 5px;
+padding: 5px;
+overflow: hidden;
+}
+.input-field {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+.toggle-sign:hover {
+    background-color: #0056b3;
+}
+.input-separator {
+    padding: 0 5px;
+}
+
+/* Add custom CSS styles to reduce the gap between lines */
+.stepsContent {
+    line-height: 1.5; /* Adjust this value as needed */
+}
